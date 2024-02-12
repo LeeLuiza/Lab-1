@@ -1,8 +1,10 @@
 package com.example.demo.model;
 
+
 import java.util.Date;
 
 public class Post {
+    private Long id;
     String text;
     Integer likes;
     private Date creationDate;
@@ -22,6 +24,17 @@ public class Post {
         this.creationDate = creationDate;
     }
 
+    public Post(Long id, String text, Integer likes, Date creationDate){
+        this.id = id;
+        this.text = text;
+        this.likes = likes;
+        this.creationDate = creationDate;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
     public String getText() {
         return text;
     }
@@ -31,5 +44,8 @@ public class Post {
     }
     public Date getCreationDate() {
         return creationDate;
+    }
+    public void setLikes(Integer likes){
+        this.likes = likes;
     }
 }
